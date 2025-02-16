@@ -100,3 +100,70 @@ selecaoCanditados(7, 'mestrado'); // = plena
 selecaoCanditados(10, 'graduacao'); // = junior
 
 // ============ QUESTÃO 07 ======================================
+function avaliarFornecedores(qualidade, prazoEntrega) {
+    if (qualidade == 'excelente' && prazoEntrega < 5) {
+        console.log('Avaliação: fornecedor A.');
+    }
+    else if (qualidade == 'boa' && prazoEntrega >= 5 && prazoEntrega <= 10) {
+        console.log('Avaliação: fornecedor B.');
+    }
+    else if (qualidade == 'regular' || prazoEntrega > 10) {
+        console.log('Avaliação: fornecedor C.');
+    }
+}
+
+avaliarFornecedores('excelente', 2); // = A
+avaliarFornecedores('boa', 7); // = B
+avaliarFornecedores('regular', 13); // = C
+
+// ============ QUESTÃO 08 ======================================
+function classificarProjetos(orcamento, complexidade) {
+    if (orcamento > 1000000 && complexidade == 'alta') {
+        console.log('Classificaçao do projeto: projeto estratégico.');
+    }
+    else if (orcamento >= 500000 && orcamento <= 1000000 && complexidade == 'media') {
+        console.log('Classificaçao do projeto: projeto importante.'); 
+    }
+    else if (orcamento < 500000 || complexidade == 'baixa') {
+        console.log('Classificação do projeto: projeto secundário.');
+    }
+}
+
+classificarProjetos(170000, 'alta'); // = estrategico
+classificarProjetos(85000, 'media'); // = importante
+classificarProjetos(100000, 'baixa'); // = secundario
+
+// ============ QUESTÃO 09 ======================================
+
+function avaliarCursos(avaliacao, taxaConclusao) {
+    if (avaliacao > 4.5 && taxaConclusao > 95) {
+        console.log('Avaliaçao do curso: excelente!');
+    }
+    else if (avaliacao >= 3.5 && avaliacao <= 4.5 && taxaConclusao >= 75 && taxaConclusao <= 90) {
+        console.log('Avaliaçao do curso: bom!'); 
+    }
+    else if (avaliacao < 3.5 || taxaConclusao < 75) {
+        console.log('Avaliaçao do curso: regular!');
+    }
+}
+
+avaliarCursos(5, 100); // = excelente
+avaliarCursos(3.9, 85); // = bom
+avaliarCursos(1, 80); // = regular
+
+// ============ QUESTÃO 10 ======================================
+function classificarFilmes(avaliacaoUser, vizualizacaoNum) {
+    if (avaliacaoUser > 4.5 && vizualizacaoNum > 1000000) {
+        console.log('Classificação do filme: filme blockbuster.');
+    }
+    else if (avaliacaoUser >= 3.5 && avaliacaoUser <= 4.5 && vizualizacaoNum >= 500000 && vizualizacaoNum <= 1000000) {
+        console.log('Classificação do filme: filme pouplar.');
+    }
+    else if (avaliacaoUser < 3.5 || vizualizacaoNum <500000) {
+        console.log('Classificação do filem: filme nicho.');
+    }
+}
+
+classificarFilmes(5, 200000); // = blockbuster
+classificarFilmes(3.8, 600000); // = popular
+classificarFilmes(2, 100000); // = nicho
